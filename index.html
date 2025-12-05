@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>阿喜的故事｜認養代替購買</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="阿喜是一隻溫柔又慢熟的狗狗，正在等一個願意給她耐心與家的家人。">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "PingFang TC",
+        "Microsoft JhengHei", sans-serif;
+      background: #fffaf4;
+      color: #333;
+      line-height: 1.7;
+    }
+    header {
+      text-align: center;
+      padding: 32px 16px 16px;
+    }
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+      letter-spacing: 0.15em;
+    }
+    header p {
+      margin: 0;
+      color: #777;
+      font-size: 0.95rem;
+    }
+    .tagline {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #aa7443;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 16px 40px;
+    }
+    .video-section {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+    }
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      /* 16:9 比例 */
+      padding-top: 177.78%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      background: #000;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .story {
+      margin-top: 32px;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px 18px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+    .story h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      border-left: 4px solid #f0a25a;
+      padding-left: 10px;
+    }
+    .story p {
+      margin: 0 0 12px;
+      text-align: justify;
+    }
+    .highlight {
+      color: #c06a36;
+      font-weight: 600;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .info-card {
+      background: #fff7ec;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 0.95rem;
+    }
+    .info-card h3 {
+      margin: 0 0 6px;
+      font-size: 1rem;
+      color: #95511e;
+    }
+    .info-card p {
+      margin: 0;
+    }
+    .cta {
+      margin-top: 24px;
+      text-align: center;
+    }
+    .cta p {
+      margin: 0 0 12px;
+    }
+    .cta .btn {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 999px;
+      border: none;
+      background: #f29c5b;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+      cursor: default; /* 只是展示文字，不是真的按鈕連結 */
+    }
+    .note {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: #777;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #aaa;
+      padding: 16px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+      .story {
+        padding: 16px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>阿喜的故事</h1>
+    <p>一隻認真生活、正在學習相信世界的孩子</p>
+    <div class="tagline">｜認養代替購買｜給牠一個家，也給自己多一個家人｜</div>
+  </header>
+
+  <main>
+    <!-- 影片區塊 -->
+    <section class="video-section" aria-label="阿喜影片">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/KnL3fogn3Os?rel=0"
+          title="阿喜的影片"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- 文字故事 -->
+    <section class="story">
+      <h2>阿喜是誰？</h2>
+      <p>
+        <span class="highlight">阿喜</span>是一隻看起來有點害羞，但其實內心非常溫柔的狗狗。
+        剛到收容所的時候，她對這個世界還有一點不確定，看到人會先退後兩步、想清楚再慢慢靠近。
+        可是只要你願意給她一點時間，她會悄悄走到你身邊，輕輕靠著你，像是在說：「我還在學習相信，你可以等我一下嗎？」
+      </p>
+      <p>
+        在志工的陪伴之下，阿喜慢慢學會牽繩散步、學會在草地上翻肚曬太陽，也學會有人叫她名字時，
+        尾巴可以放心地大力左右搖。她不是那種一見面就瘋狂熱情的孩子，
+        卻是一隻<span class="highlight">會把全部信任慢慢交到你手上的狗</span>。
+      </p>
+      <p>
+        對她來說，「家」不是華麗的房子，而是一個願意每天叫她名字、跟她說晚安、
+        在她害怕打雷時陪在身邊的地方。如果你也在找一個可以慢慢相處、安安靜靜陪伴你的夥伴，
+        也許你們剛好可以拼在一起，變成一幅完整的生活拼圖。
+      </p>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>阿喜的小檔案</h3>
+          <p>．性別：母<br>
+             ．年齡：約&nbsp;（請自行填寫）歲<br>
+             ．個性：慢熟、溫柔、黏人但不打擾</p>
+        </div>
+        <div class="info-card">
+          <h3>適合的家庭</h3>
+          <p>
+            ✔ 接受慢熟、願意給時間的家<br>
+            ✔ 能規律散步、不放養<br>
+            ✔ 家人共識一致，把牠當家人而不是看門工具
+          </p>
+        </div>
+        <div class="info-card">
+          <h3>相處小提醒</h3>
+          <p>
+            ・第一次見面先蹲低、輕聲說話<br>
+            ・不要突然撲抱她，改用摸下巴、肩膀開始<br>
+            ・給她一些安靜的角落，讓她可以慢慢適應新家
+          </p>
+        </div>
+      </div>
+
+      <div class="cta">
+        <p>
+          如果你看完影片，也喜歡這樣慢熟、誠實又專情的孩子，<br>
+          歡迎預約來現場和阿喜散散步、一起認識彼此。
+        </p>
+        <span class="btn">想認識阿喜，請私訊粉專／聯絡志工</span>
+      </div>
+
+      <div class="note">
+        ※ 聯絡方式、收容所名稱、預約方式請依實際狀況自行補上，例如：<br>
+        粉專、LINE、電話、Google 表單連結等。
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    本頁由志工自製，用來分享阿喜的故事，歡迎分享，請勿轉作商業用途。
+  </footer>
+</body>
+</html>
