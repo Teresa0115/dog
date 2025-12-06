@@ -2,228 +2,346 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <title>阿喜的故事｜待家的狗狗們</title>
+  <title>阿喜的故事｜等家的狗狗</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="阿喜是一隻慢熟又溫柔的狗狗，正在等一個願意給她時間與耐心的家。">
+  <meta name="description" content="阿喜是一隻貼心又黏人的公狗，正在等待一個願意陪他一輩子的家人。歡迎來收容所與他見面、互動。">
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC",
-        "PingFang TC", "Microsoft JhengHei", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang TC",
+        "Microsoft JhengHei", system-ui, sans-serif;
       background: #fffaf4;
       color: #333;
       line-height: 1.7;
     }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
     header {
       text-align: center;
-      padding: 24px 16px 10px;
+      margin-bottom: 24px;
     }
+
     header h1 {
-      margin: 0 0 6px;
-      font-size: 1.8rem;
+      margin: 0 0 8px;
+      font-size: 2rem;
+      letter-spacing: 0.1em;
     }
+
     header p {
       margin: 0;
-      color: #777;
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    .tagline {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #ffe5c6;
+      font-size: 0.85rem;
+      color: #9a4b00;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .photo-box {
+      border-radius: 18px;
+      background: #ffe5cf;
+      padding: 10px;
+    }
+
+    .photo-inner {
+      border-radius: 14px;
+      background: #fff;
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #999;
+      border: 1px dashed #f0b58a;
+    }
+
+    .hero-text h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .pill {
+      font-size: 0.8rem;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: #fff2d9;
+      color: #9a4b00;
+      border: 1px solid #f3c18b;
+    }
+
+    .hero-text p {
+      margin: 0 0 6px;
       font-size: 0.95rem;
     }
-    .back-link {
-      text-align: center;
-      margin-top: 8px;
-      font-size: 0.9rem;
+
+    .section {
+      margin-bottom: 32px;
     }
-    .back-link a {
-      color: #c06a36;
-      text-decoration: none;
-    }
-    .back-link a:hover {
-      text-decoration: underline;
-    }
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 16px 40px;
-    }
-    .video-section {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-    }
-    .video-wrapper {
+
+    .section h2 {
+      font-size: 1.3rem;
+      margin: 0 0 12px;
       position: relative;
-      width: 100%;
-      max-width: 480px;
-      padding-top: 177.78%; /* 9:16 Shorts 直式影片比例 */
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    .section h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 40%;
+      height: 3px;
+      border-radius: 999px;
+      background: #ffd199;
+      opacity: 0.7;
+    }
+
+    .section p {
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+    }
+
+    .video-wrap {
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
       background: #000;
+      max-width: 640px;
+      margin: 0 auto 8px;
+      aspect-ratio: 9 / 16;
     }
-    .video-wrapper iframe {
-      position: absolute;
-      inset: 0;
+
+    .video-wrap iframe {
       width: 100%;
       height: 100%;
       border: 0;
     }
-    .story {
-      margin-top: 28px;
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 20px 18px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    }
-    .story h2 {
-      margin-top: 0;
-      font-size: 1.3rem;
-      border-left: 4px solid #f0a25a;
-      padding-left: 10px;
-    }
-    .story p {
-      margin: 0 0 12px;
-      text-align: justify;
-    }
-    .highlight {
-      color: #c06a36;
-      font-weight: 600;
-    }
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px;
-      margin-top: 8px;
-    }
-    .info-card {
-      background: #fff7ec;
-      border-radius: 12px;
-      padding: 12px 14px;
-      font-size: 0.95rem;
-    }
-    .info-card h3 {
-      margin: 0 0 6px;
-      font-size: 1rem;
-      color: #95511e;
-    }
-    .info-card p {
-      margin: 0;
-    }
-    .cta {
-      margin-top: 22px;
+
+    .video-note {
       text-align: center;
-    }
-    .cta p {
-      margin: 0 0 10px;
-    }
-    .cta .btn {
-      display: inline-block;
-      padding: 9px 22px;
-      border-radius: 999px;
-      background: #f29c5b;
-      color: #fff;
-      font-size: 0.9rem;
-      letter-spacing: 0.05em;
-      text-decoration: none;
-      cursor: default;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.18);
-    }
-    .note {
-      margin-top: 10px;
       font-size: 0.85rem;
       color: #777;
-      text-align: center;
     }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .info-item {
+      background: #fff;
+      border-radius: 12px;
+      padding: 8px 10px;
+      border: 1px solid #ffe0ba;
+      font-size: 0.9rem;
+    }
+
+    .info-label {
+      font-size: 0.75rem;
+      color: #aa6a1a;
+      letter-spacing: 0.1em;
+    }
+
+    .info-value {
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .cta-box {
+      background: #fff4dd;
+      border-radius: 16px;
+      padding: 16px 16px 14px;
+      border: 1px solid #ffddb1;
+    }
+
+    .cta-box p {
+      margin: 0 0 8px;
+      font-size: 0.95rem;
+    }
+
+    .cta-list {
+      margin: 0;
+      padding-left: 20px;
+      font-size: 0.9rem;
+    }
+
+    .cta-list li {
+      margin-bottom: 4px;
+    }
+
     footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: #aaa;
-      padding: 16px;
+      margin-top: 24px;
+      border-top: 1px solid #f1d0a2;
+      padding-top: 12px;
+      font-size: 0.85rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      color: #777;
+    }
+
+    footer a {
+      color: #aa6a1a;
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(170, 106, 26, 0.4);
+      padding-bottom: 1px;
+    }
+
+    footer a:hover {
+      border-bottom-style: solid;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>阿喜的故事</h1>
-    <p>一隻慢熟、誠實、安靜陪伴你的孩子</p>
-    <div class="back-link">
-      ← <a href="index.html">回到待家的狗狗們</a>
-    </div>
-  </header>
+  <div class="page">
+    <header>
+      <h1>阿喜的故事</h1>
+      <p>新北市動物之家．等家的暖男小狗</p>
+      <div class="tagline">「如果可以，我想每天都靠在你身邊。」</div>
+    </header>
 
-  <main>
-    <!-- 影片區塊 -->
-    <section class="video-section" aria-label="阿喜影片">
-      <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/KnL3fogn3Os?rel=0"
-          title="阿喜的影片"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </section>
-
-    <!-- 文字故事 -->
-    <section class="story">
-      <h2>阿喜是誰？</h2>
-      <p>
-        <span class="highlight">阿喜</span>是一隻剛開始有點害羞、但其實內心非常溫柔的孩子。
-        剛到收容所時，她對世界充滿疑問，看見陌生人會先退兩步觀察。
-        可是只要你願意給她一點時間，她會慢慢靠近你，最後輕輕靠在你身邊。
-      </p>
-      <p>
-        她屬於那種「不會一下子撲上來、但會把最真心給你」的狗。
-        她在志工陪伴下，學會散步、學會在草地上翻肚、也學會在人叫她名字時輕輕搖尾巴。
-        她慢熟，但她很努力。
-      </p>
-      <p>
-        如果你喜歡的是那種「願意跟你一起慢慢生活，一起變好」的孩子，
-        那她會是最適合你的伴侶。
-      </p>
-
-      <div class="info-grid">
-        <div class="info-card">
-          <h3>阿喜的小檔案</h3>
-          <p>
-            ・性別：母<br>
-            ・年齡：請自行補上<br>
-            ・個性：慢熟、溫柔、非常乖巧
-          </p>
+    <main>
+      <!-- 首圖＋簡介 -->
+      <section class="hero">
+        <div class="photo-box">
+          <div class="photo-inner">
+            未來可以放上阿喜的照片<br>
+            （例如：從收容所或你拍的可愛照片）
+          </div>
         </div>
-
-        <div class="info-card">
-          <h3>適合的家庭</h3>
-          <p>
-            ✔ 接受慢熟、願意給時間的家<br>
-            ✔ 喜歡安靜、穩定生活的人<br>
-            ✔ 願意每天帶她散步、陪伴她的人
-          </p>
+        <div class="hero-text">
+          <h2>阿喜是怎樣的一個男生呢？</h2>
+          <div class="pill-row">
+            <span class="pill">公狗 ♂</span>
+            <span class="pill">撒嬌黏人</span>
+            <span class="pill">喜歡靠在人身上</span>
+            <span class="pill">需要耐心陪伴的家</span>
+          </div>
+          <p>阿喜是一隻看到人就會開心搖尾巴的 <strong>小男生</strong>，最喜歡做的事，就是安安靜靜地靠在志工身邊。</p>
+          <p>剛認識的時候，他可能會有一點點觀察，但只要發現你是溫柔的人，很快就會露出放心的小表情，把重量輕輕交給你。</p>
+          <p>他還不完美，還在學習牽繩散步、在籠子裡等候，但是他非常願意跟著人一起努力。</p>
         </div>
+      </section>
 
-        <div class="info-card">
-          <h3>相處小提醒</h3>
-          <p>
-            ・第一次見面不要直接摸頭<br>
-            ・可以從側臉、下巴開始互動<br>
-            ・給她一個安心的小角落就很好
-          </p>
+      <!-- 影片區 -->
+      <section class="section">
+        <h2>看看阿喜的小影片</h2>
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/KnL3fogn3Os"
+            title="阿喜的影片"
+            allowfullscreen>
+          </iframe>
         </div>
-      </div>
+        <p class="video-note">
+          若影片無法播放，可改用
+          <a href="https://www.youtube.com/shorts/KnL3fogn3Os" target="_blank" rel="noopener">
+            這個連結在 YouTube 打開
+          </a>。
+        </p>
+      </section>
 
-      <div class="cta">
-        <p>想認識阿喜，歡迎私訊粉專或聯絡志工。</p>
-        <span class="btn">認識阿喜 → 請聯絡志工</span>
-      </div>
+      <!-- 文字故事 -->
+      <section class="section">
+        <h2>屬於阿喜的日常</h2>
+        <p>在收容所的生活裡，阿喜每天都在等待：等待有人走到他的籠前、等著那一雙願意停下來的眼睛。</p>
+        <p>第一次被帶出來散步時，他有點緊張，步伐小小的，耳朵豎得高高的，一邊聽著外面的聲音，一邊確認牽繩另一端的「你」是不是還在。</p>
+        <p>但只要你蹲下來拍拍腿、輕聲叫他名字，他就會慢慢靠近，把頭埋在你的手心裡，好像在說：「我有點害怕，但有你在，我就敢往前走。」</p>
+        <p>他不是吵鬧型的小男生，比較像是那種安靜、穩穩地跟在你後面的孩子。有人走過，他會先看你的反應；你放鬆，他也就放鬆。</p>
+      </section>
 
-      <div class="note">
-        ※ 收容所資訊、聯絡方式請依實際狀況補上。
-      </div>
-    </section>
-  </main>
+      <!-- 基本資料 -->
+      <section class="section">
+        <h2>阿喜的小檔案</h2>
+        <div class="info-grid">
+          <div class="info-item">
+            <div class="info-label">性別</div>
+            <div class="info-value">公狗 ♂</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">年齡</div>
+            <div class="info-value">年紀約略，請以所內公告為準</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">體型</div>
+            <div class="info-value">中型犬（實際以現場為準）</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">個性關鍵字</div>
+            <div class="info-value">黏人、溫柔、需要安全感</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">健康／結紮狀況</div>
+            <div class="info-value">依新北市動物之家公告為準</div>
+          </div>
+        </div>
+      </section>
 
-  <footer>
-    本頁由志工自製，用來分享阿喜的故事。
-  </footer>
+      <!-- 認養說明 -->
+      <section class="section">
+        <h2>如果你想認識他⋯⋯</h2>
+        <div class="cta-box">
+          <p>阿喜最需要的，是一個願意給他時間、願意陪他練習的家人。</p>
+          <ul class="cta-list">
+            <li>歡迎先到收容所現場，實際與他互動、散步、抱抱他。</li>
+            <li>如果家中有其他毛孩或小朋友，也可以一起評估是否合適。</li>
+            <li>請務必把養狗當成一輩子的承諾，而不是一時的心動。</li>
+          </ul>
+          <p>對他來說，被帶回家不只是一個新生活的開始，也是他相信人類一次的勇氣。</p>
+        </div>
+      </section>
+    </main>
 
+    <footer>
+      <span>本頁由志工手動製作，內容以收容所最新公告為準。</span>
+      <span>
+        <a href="../index.html">← 回到狗狗首頁</a>
+      </span>
+    </footer>
+  </div>
 </body>
 </html>
+
