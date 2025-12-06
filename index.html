@@ -146,6 +146,36 @@
         padding: 16px 14px;
       }
     }
+
+  /* 首頁 Hero 區塊：阿喜 Banner */
+  .home-hero {
+    width: 100%;
+    background: #f8e6c4; /* 奶油色底，避免載入前空白太刺眼 */
+  }
+
+  .home-hero-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .home-hero-banner {
+    width: 100%;
+    aspect-ratio: 16 / 6;            /* 1600 x 600 比例 */
+    background-image: url("hero-ahsi.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: 768px) {
+    .home-hero-banner {
+      /* 手機略往上裁，讓臉更居中 */
+      background-position: center top;
+    }
+  }
+
+
+  
   </style>
 </head>
 <body>
